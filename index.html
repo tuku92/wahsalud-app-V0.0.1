@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Wellness And Health</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" charset="utf-8" />
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.5.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+    
+</head>
+ 
+<body>
+    
+    <!------------    LOGIN    !------------>
+	<div data-role="page" id="inicio">
+	    
+            <div id="fondo-login">
+
+            <!--- HEADER !-->
+            <div data-role="header" class="none">
+            <img id="logo" src="img/logo.png">
+            </div>
+
+
+            <!--- CONTENIDO !-->
+            <div data-role="content">	
+            <form id="formulario" class="fondoFormulario" >
+            <input type="text" placeholder="Usuario" id="nombreUsuario" name="nombreUsuario">
+            <input type="password" placeholder="Contraseña" id="password" name="password">
+            <input type="submit" value="Iniciar Sesión">
+            </form>	
+            </div>
+            </div>
+        
+	</div>
+
+    
+    <!------------    HOME    !------------>
+	<div data-role="page" id="home" class="page">
+	        
+            
+            <!--- MENU NAVEGACION !-->
+            <div class="menu-nav topbar">
+            <div class="btn-menu-nav">
+            <a href="#logrosPagina" data-transition="slideup"><div class="img-btn btn-logro-o"></div></a>
+            </div>
+            <div class="diferente">
+            <p><span class="azul">Wellness</span> <span class="rojo">&amp; Health</span></p>
+            </div>
+            
+            </div>
+        
+        
+            <!--- CONTENIDO !-->
+		    <div data-role="content" class="secciones">
+                <div id="tituloBienvenidoContenedor">
+		      <h1 id="tituloBienvenido">
+                  
+                </h1>
+                    
+                    </div>
+                  
+                  <div class="botonesConocer">
+            <a href="#porcentajeGrasa" data-transition="slideup"><div class="botoncesDivididosConoce btn-porcentaje-o"></div></a>
+                      <a href="#tiempoDescanso" data-transition="slideup"><div class="botoncesDivididosConoce btn-tiempoDescanso-o"></div></a>
+          
+                  </div>
+                  
+                    
+                
+		    </div>
+ 
+	</div>
+
+    <!------------    LOGROS Y BENEFICIOS    !------------>
+	<div data-role="page" id="logrosPagina" class="page">
+	           
+         <!--- MENU NAVEGACION !-->
+            <div class="menu-nav topbarDiferente">
+            <div class="btn-menu-nav menu-logros">
+            <a href="#home" data-transition="slideup"><div class="img-btn btn-back-o"></div></a>
+            </div>
+            <div class="diferente menu-logros">
+            <p>Logros y beneficios</p>
+            </div>
+            
+            </div>
+        
+        
+            <!--- CONTENIDO !-->
+		    <div data-role="content" class="secciones">	
+		    
+             <div class="botonesLogros">
+                 
+                 <div id="tituloLogros"></div>
+                 
+          
+                  </div>
+                
+		    </div>
+ 
+	</div>
+    
+    
+    
+    <!------------    TIMMER    !------------>
+	<div data-role="page" id="tiempoDescanso" class="page">
+	           
+        
+            <!--- HEADER !-->
+            <div class="menu-nav topbarDiferente">
+            <div class="btn-menu-nav menu-logros">
+            <a href="#home" data-transition="slideup"><div class="img-btn btn-back-o"></div></a>
+            </div>
+            <div class="diferente menu-logros">
+            <p>Tiempo de descanso</p>
+            </div>
+            
+            </div>
+		 
+                
+        
+            <!--- CONTENIDO !-->
+		    <div data-role="content" class="secciones">	
+		    
+            <div id="opciones-notificaciones">  
+                
+                <div id="timer">00:00</div>
+<!--button id="master" disabled>make me the master</button-->
+<p>
+    <div id="start">start</div>
+    <div id="stop">stop</div>
+    <div id="reset">reset</div>
+</p>
+<p>
+
+</p>
+            
+                
+            </div> 
+		    </div>
+ 
+	</div>    
+    
+
+<script>
+
+    
+	$('#formulario').submit(function() {
+	// recolecta los valores que inserto el usuario
+	var datosUsuario = $("#nombreUsuario").val()
+	var datosPassword = $("#password").val()
+    var homeLoaded = false;
+
+	archivoValidacion = "http://wahsalud.tk/appwah/validacionReal.php?jsoncallback=?" 
+	 
+	$.getJSON( archivoValidacion, { usuario:datosUsuario ,password:datosPassword}) 
+	.done(function(respuestaServer) {
+
+
+		if(respuestaServer.validacion == "ok"){ 
+
+			$.mobile.changePage("#home"); // Redirige a esa page automaticamente va una vez
+
+			$("#home").on("pageshow", function(){ //al mostrarse esa pagina pasa algo.
+                    if(homeLoaded == false){
+                        
+                        $('#tituloBienvenido').append('<span class="lightTitulo gris">Bienvenido</span> <span class="azul"> ' + respuestaServer[0].nombreUsuario +  '</span> <span class="lightTitulo gris">conoce tu</span>'); 
+                    
+                        homeLoaded = true;
+                }
+                        
+			});
+            
+            
+            $("#logrosPagina").on("pageshow", function(){ //al mostrarse esa pagina pasa algo.
+                
+                
+                //primero creamos la lista de los logros
+                var elementosListaLogros = Object.keys(respuestaServer['logrosListas']).length;
+                
+                //console.log(respuestaServer['logros'].length);
+                        
+                for(var logroLista=0; logroLista< elementosListaLogros; logroLista++){
+                    
+                    $('#tituloLogros').append(
+                   // '<h1>'+ respuestaServer["logrosListas"][logroLista].nombreLogroES +'</h1>'+
+                    '<img class="contenedorImagenLogro" id="'+ respuestaServer["logrosListas"][logroLista].nombreLogroES +'" src="/wahsaludDesdeCero/'+respuestaServer["logrosListas"][logroLista].fotoLogro+'"/>'); 
+                    
+                   
+                    
+                    
+				}
+                
+                 //segundo creamos la lista de los logros obtenidos
+                var elementosLogros = Object.keys(respuestaServer['logros']).length;
+                var arrayLogrosTiene = new Array();
+				for(var logro=0; logro< elementosLogros; logro++){
+                    
+                arrayLogrosTiene.push(respuestaServer["logros"][logro].nombreLogroES);
+                console.log(respuestaServer["logros"][logro].nombreLogroES);
+                    
+                   /* $('#tituloLogros').append(
+                    '<h1>'+ respuestaServer["logros"][logro].nombreLogroES +'</h1>'+
+                    '<img id="cumpleanos" src="/wahsaludDesdeCero/'+respuestaServer["logros"][logro].fotoLogro+'"/>'); 
+                   */ 
+                    
+                         
+				}
+                
+                
+                var arrayLogrosLista = new Array();
+				for(var logro=0; logro< elementosListaLogros; logro++){
+                    
+                arrayLogrosLista.push(respuestaServer["logrosListas"][logro].nombreLogroES);
+                    
+                console.log(respuestaServer["logrosListas"][logro].nombreLogroES);
+                    
+                    
+                   //$('#tituloLogros').append(
+                //    '<h1>'+ respuestaServer["logros"][logro].nombreLogroES +'</h1>'+
+                //    '<img id="cumpleanos" src="/wahsaludDesdeCero/'+respuestaServer["logros"][logro].fotoLogro+'"/>'); 
+                   
+                    
+                         
+				}
+                
+                for(var loTiene=0; loTiene< elementosLogros; loTiene++){
+                if($.inArray(respuestaServer["logros"][loTiene].nombreLogroES, arrayLogrosLista) != -1 ){
+                    
+                    console.log("LO TIENE");
+                
+                }
+                    else{
+                    console.log("NO LO TIENE LA WEA" + respuestaServer["logros"][loTiene].nombreLogroES);
+                        
+                        if(respuestaServer["logros"][loTiene].nombreLogroES == "CumpleanosObt")
+                        {
+                        $('#Cumpleanos').attr('src', '/wahsaludDesdeCero/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        }
+                        // NUEVOS OBTENIDOS ====== 
+                        if(respuestaServer["logros"][loTiene].nombreLogroES == "AsistenciaObt")
+                        {
+                        $('#Asistencia').attr('src', '/wahsaludDesdeCero/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        }
+                        
+                         if(respuestaServer["logros"][loTiene].nombreLogroES == "EntranamientoObte")
+                        {
+                        $('#Entranamiento').attr('src', '/wahsaludDesdeCero/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        }
+                        
+                        if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanAmigoObte")
+                        {
+                        $('#PlanAmigo').attr('src', '/wahsaludDesdeCero/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        }
+                        
+                        if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanSemestralObte")
+                        {
+                        $('#PagoSemestral').attr('src', '/wahsaludDesdeCero/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        }
+                        
+                        if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanAnualObte")
+                        {
+                        $('#PagoAnual').attr('src', '/wahsaludDesdeCero/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        }
+                        
+                        //============
+                        
+                        // NUEVOS VENCE ====== 
+                        
+                         if(respuestaServer["logros"][loTiene].nombreLogroES == "PagoSemestralVen")
+                        {
+                        $('#PagoSemestral').attr('src', '/wahsaludDesdeCero/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        }
+                        
+                        if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanAnualVen")
+                        {
+                        $('#PagoAnual').attr('src', '/wahsaludDesdeCero/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        }
+                        
+                        
+                        if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanAmigoVen")
+                        {
+                        $('#PlanAmigo').attr('src', '/wahsaludDesdeCero/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        
+                        }
+                                                
+                                           
+                        
+                        
+                         
+                        //Reemplazarle las cosas de arriba por cada una
+                        
+                    
+                    
+                    }
+                }
+
+                
+                
+              //  respuestaServer['logros'][0].nombreLogroES;
+                           
+			});
+            
+            
+            $("#tiempoDescanso").on("pageshow", function(){
+            
+            
+                
+                
+                $('#stop').click(function(){
+            
+                console.log("Le di al STOP");
+
+                    alert("entre al timmer");
+                //  FB.child('running').set(false);            
+                }); 
+                
+               
+                var hou = 2;
+                var sec = 60;
+                
+                
+               var tiempoCorre =  setInterval(function(){
+                //var a = new Date();
+                                    
+                   // $("#timer").text();
+                  $("#timer").text (hou +" : " + sec);
+                    sec--;
+                    if(sec == 00)
+                    {
+                        hou--;
+                        sec = 60;
+                        if (hou == 0)
+                        {
+                            hou = 2;
+                        }
+                    }
+                    },500);
+          //  }
+
+        /*    function resetTimer()
+            {
+
+            }
+                
+        */
+            
+            
+                
+            
+                
+                
+           
+
+            
+            });
+
+            
+            
+        
+            
+
+		
+           
+                
+                          
+                   
+                /* Esto guarda en el localstorage */
+                var datosLocales = JSON.stringify(respuestaServer);
+                localStorage.setItem("datos", datosLocales);
+            
+                if(navigator.offline){
+                    alert("No hay señal");
+                }else{
+                    alert("Si hay señal");   
+                }
+            
+                /* Esto es para leer y va en otra parte */
+                var datosGuardados = localStorage.getItem("datos");
+                var datosObjeto = JSON.parse(datosGuardados);
+                
+            
+	}else{
+
+	    alert("no");
+	}
+	
+
+	})
+
+
+	return false;
+
+
+	})
+
+
+</script>
+
+    
+   
+    
+    
+
+
+<script type="text/javascript" src="getProjects.js"></script> 
+<script type="text/javascript" src="cordova.js"></script> 
+
+</body>
+</html>

@@ -1,0 +1,629 @@
+#inicio, #home{
+	text-shadow: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page{ color: black; }
+
+a{
+    outline: none;   
+}
+
+.ui-focus {
+ -moz-box-shadow: none !important;
+ -webkit-box-shadow: none !important;
+ box-shadow: none !important;
+}
+
+* {
+text-shadow:none;
+}
+
+/******------------ LOGIN ------------******/
+
+.ui-body-c, .ui-overlay-c{
+    background: none;
+}
+
+.ui-page ui-body-c ui-page-active{
+    background-color: #FEFEFE;
+}
+
+.none{ /** Para el header **/
+	background: none;
+    border: none;
+}
+
+
+#logo{
+    display: block;
+    width:40%;
+    height:auto;
+    margin: 90px auto;
+
+}
+
+#formulario{    
+    width:80%;
+    padding:19.5% 10%;
+    text-shadow: none;
+}
+
+.fondoFormulario{
+background-color: #C6C9EA;
+}
+
+
+.submitButton , .ui-btn{
+	background: #303F9F;
+    border-radius: 0; 
+    color: white;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    border:0;
+}
+
+.ui-btn-hover-c:hover{
+    background-color: #FEFEFE;
+    border-radius: 0; 
+    color: white;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #303F9F;
+    text-shadow: none;
+}
+
+.ui-content{
+	padding: 0;
+	overflow: hidden;
+    background: #FEFEFE;
+}
+
+.ui-corner-all{
+    border-radius: 0;   
+}
+
+.ui-input-text input{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    color:#707070;
+    height: 25px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-shadow: none;
+    background: #FEFEFE;
+}
+
+.ui-input-text{
+    background: #FEFEFE;
+}
+
+div.ui-input-text{
+    background: #FEFEFE;
+    padding-left: 0.4em;
+
+}
+
+
+/******------------ LOGIN ------------******/
+
+
+
+/******------------ GENERAL SECCIONES ------------******/
+
+
+.topbar{
+    background-color: #ca0e00;
+    border-style:none;
+    position: fixed;
+    width: 100%;
+       -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow:    0px 2px 4px 0px rgba(0, 0, 0, 0.48);
+    box-shadow:         0px 2px 4px 0px rgba(0, 0, 0, 0.48);
+    height: 60px;
+    top: 0;
+    z-index: 100;
+}
+
+.ui-title{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color:#FEFEFE;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+/*.secciones{ */
+    /*padding-top: 70px;*/
+    /*padding-bottom: 70px;*/ 
+/*}*/
+
+/** MENU DE NAV. **/ 
+
+.azul {
+    color: #303F9F;
+}
+
+.rojo{
+    color: #FE504F;
+}
+
+
+
+.menu-nav{
+    background-color: #FFFFFF;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.btn-menu-nav{
+    width: 15%;
+    height: 60px;
+    float: left;
+}
+
+.diferente{
+    width: 50%;
+    float: left;
+    padding-left: 10%;
+    margin-top: 2px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    
+    
+}
+
+
+.img-btn{
+    height:30px;
+    width: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
+.btn-logro-o{
+   background-image: url(../img/popular-o.png); 
+   background-size: 30px;
+   background-repeat: no-repeat;
+}
+
+.btn-logro-o:hover{
+    
+   background-image: url(../img/popular-a.png); 
+   background-size: 30px;
+   background-repeat: no-repeat;
+}
+
+
+/** CONTENIDO DE LA HOME **/
+
+.gris {
+color: #202020;
+}
+
+#tituloBienvenidoContenedor{
+width: 100%;
+    /*background-color: red;*/
+    height: auto;
+    margin: 30% auto;
+}
+
+#tituloBienvenido{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.lightTitulo{
+
+font-weight: 200;
+}
+
+.botonesConocer{
+    
+    width: 100%;
+    display: block;
+    height: auto;
+    overflow: hidden;
+    position: fixed;
+    margin: 0 auto;
+    bottom: 0;
+    z-index: 100;
+}
+
+.contenedorImagenLogro{
+/*width: 50%; */
+    width: 48%;
+    margin: 1%;
+    float: left;
+    display: block;
+
+
+}
+
+.botoncesDivididosConoce{
+    /*HAY QUE CAMBIARLE EL ALTO PARA QUE FUNCIONE*/
+    
+    height: 200px;
+    width: 50%;
+    margin: 0;
+    float: left;
+    display: block;
+}
+
+.btn-porcentaje-o{
+  
+   background-image: url(../img/conocer/porcentajeGrasa.png); 
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+.btn-porcentaje-o:hover{
+    
+   background-image: url(../img/conocer/porcentajeGrasa-o.png); 
+   background-repeat: no-repeat;
+}
+
+
+.btn-tiempoDescanso-o{
+   background-image: url(../img/conocer/tiempoDescanso.png); 
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+.btn-tiempoDescanso-o:hover{
+    
+   background-image: url(../img/conocer/tiempoDescanso-o.png); 
+   background-repeat: no-repeat;
+}
+/******------------ GENERAL SECCIONES------------******/
+
+
+
+
+/******------------ LOGROS Y BENEFICIOS ------------******/
+
+
+.topbarDiferente{
+    background-color: #2F3D9E;
+    border-style:none;
+    position: fixed;
+    width: 100%;
+       -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow:    0px 2px 4px 0px rgba(0, 0, 0, 0.48);
+    box-shadow:         0px 2px 4px 0px rgba(0, 0, 0, 0.48);
+    height: 60px;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+.menu-logros{
+background-color: #2F3D9E;
+}
+
+.menu-logros a{
+background-color: aqua;
+}
+
+.menu-logros p{
+color: #FFFFFF;
+}
+
+.btn-back-o{
+   background-image: url(../img/back-o.png); 
+    height: 30px;
+    /*width: 30px;*/
+    background-size: 30px;
+   background-repeat: no-repeat;
+    margin: 15px auto;
+}
+
+
+
+
+.botoncesDivididosLogros{
+    /*HAY QUE CAMBIARLE EL ALTO PARA QUE FUNCIONE*/
+    
+    height: 200px;
+    width: 46%;
+    margin: 5px;
+    float: left;
+    display: block;
+}
+
+.botonesLogros{
+    
+    width: 100%;
+    margin: 65px auto 0 auto;
+    display: block;
+    height: auto;
+    overflow: hidden;
+   /* margin-top: 65px;*/x
+    
+    
+}
+
+.sinMargen{
+    /*HAY QUE CAMBIARLE EL ALTO PARA QUE FUNCIONE*/
+    
+    margin-top:0;
+}
+
+.btn-cumpleanos{
+  
+   background-image: url(../img/logros/cumpleanos.png); 
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+.btn-plan{
+   background-image: url(../img/logros/plan.png); 
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+.btn-asistencia{
+   background-image: url(../img/logros/asistencia.png); 
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+.btn-pagoSemestral{
+   background-image: url(../img/logros/pagoSemestral.png); 
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+.btn-pagoAnual{
+   background-image: url(../img/logros/pagoAnual.png); 
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+.btn-planAmigo{
+   background-image: url(../img/logros/planAmigo.png); 
+   background-size: 100%;
+   background-repeat: no-repeat;
+}
+
+
+
+
+
+/******------------ TIMER ------------******/
+
+#timer {
+    padding: 20px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    margin-top: 70px;
+}
+.hide {
+    display: none;
+}
+
+
+.ui-header .ui-title, .ui-footer .ui-title{
+    padding-top: 6px; 
+    font-size: 1.2em;
+}
+
+.articulo-popular{
+    position: relative;
+}
+
+#articulos-populares{
+    width:95%;
+    margin: 0 2.5%;
+    margin-bottom: 2.5%;
+    overflow: hidden;
+    padding: 0;
+}
+
+#articulos-populares img{
+    width:100%;
+    height: auto;  
+    margin: 0;
+    display: block; /* para sacar espacio blanco debajo*/
+}
+
+
+#articulos-populares ul{
+    padding: 0;
+    margin: 0;
+}
+
+#articulos-populares li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: auto; 
+    background-color: #ca0e00;
+    position: relative;
+    border-bottom: 5px solid #f6b723;
+    margin-bottom: 30px;
+}
+
+#articulos-populares li a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+#articulos-populares h1{
+    font-family: 'Squada One', cursive;
+    color:#fefefe;
+    text-shadow: none;
+    font-size: 1.4em;
+    font-weight: 400;
+    height: auto;
+    padding: 12px;
+    padding-top: 0;
+}
+
+.articulo-popular  .genero{
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+    color:#f6b723;
+    text-shadow: 0;
+    background-color: #ca0e00;
+    padding: 4px 8px;
+    font-size: 0.7em;
+    border: 1px solid #f6b723;  
+    display: block;
+    margin:0;
+}
+
+
+
+/******------------ ARTICULOS ------------******/
+
+
+/******------------ FAVORITOS ------------******/
+
+.articulo-favorito{
+    position: relative;
+}
+
+#articulos-favoritos{
+    width:95%;
+    margin: 0 2.5%;
+    margin-bottom: 2.5%;
+    overflow: hidden;
+    padding: 0;
+    
+}
+
+#articulos-favoritos img{
+    width:40%;
+    height: auto;  
+    margin: 0;
+    display: block; /* para sacar espacio blanco debajo*/
+    float: left;
+    padding-right: 12px;
+    min-width: 191px;
+    min-height: 105px;
+}
+
+
+#articulos-favoritos ul{
+    padding: 0;
+    margin: 0;
+}
+
+#articulos-favoritos li{
+    padding: 0;
+    margin: 0;
+    list-style: none; 
+    background-color: #ca0e00;
+    overflow: hidden;  
+    margin-bottom: 2.5%;
+    border-bottom: 5px solid #f6b723;
+}
+
+#articulos-favoritos li a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+#articulos-favoritos h1{
+    font-family: 'Squada One', cursive;
+    color:#fefefe;
+    text-shadow: none;
+    font-size: 1.1em;
+    font-weight: 400;
+    height: auto;
+}
+
+#articulos-favoritos .genero{
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+    color:#f6b723;
+    font-size: 0.7em;
+    text-shadow: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.1%;
+}
+
+#articulos-favoritos .categoria{
+    font-family: 'Open Sans', sans-serif;
+    color:#fefefe;
+    font-size: 0.7em;
+    text-shadow: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1%;
+}
+
+/******------------ FAVORITOS ------------******/
+
+
+
+
+
+
+
+
+
+
+
+/***************** NOTIFICACION *****************/
+
+
+.option-notificacion{
+    height: 80px;
+    width:95%;
+    margin: 0 2.5%;
+    margin-bottom: 2.5%;
+    background-color: #ca0e00;
+    border-bottom: 5px solid #f6b723;
+}
+
+.img-icon{
+    min-width: 120px;
+    overflow: hidden;
+    float: left;
+    display: block;
+}
+
+
+.option-notificacion img {
+    width: 90px;
+    height: 53px;
+    float: left;
+    margin: 15px;
+}
+
+.option-notificacion h1{
+    font-family: 'Russo One', sans-serif;  
+    color:#FEFEFE;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 80px;
+    text-shadow: none;
+
+}
+
+/***************** NOTIFICACION *****************/
