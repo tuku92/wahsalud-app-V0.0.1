@@ -13,7 +13,7 @@
 <script src="js/jquery-1.11.1.min.js"></script>
     
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
     
 <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -271,7 +271,7 @@
                 localStorage.setItem("datos", datosLocales);
             
                 if(navigator.offline){
-                    alert("No hay señal");
+                   /* alert("No hay señal");*/
                      $("#porcentajeGrasa").on("pageshow", function(){
                          $('.timer').empty();
                      });
@@ -407,7 +407,7 @@ $(function() {
                     
                     
                 }else{
-                    alert("Si hay señal"); 
+                    /*alert("Si hay señal"); */
                     
                      $("#logrosPagina").on("pageshow", function(){ //al mostrarse esa pagina pasa algo.
                 
@@ -479,32 +479,32 @@ $(function() {
                         
                         if(respuestaServer["logros"][loTiene].nombreLogroES == "CumpleanosObt")
                         {
-                        $('#Cumpleanos').attr('src', '/wahsalud240216/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        $('#Cumpleanos').attr('src', 'http://wahsalud.tk/'+respuestaServer["logros"][loTiene].fotoLogro);
                         }
                         // NUEVOS OBTENIDOS ====== 
                         if(respuestaServer["logros"][loTiene].nombreLogroES == "AsistenciaObt")
                         {
-                        $('#Asistencia').attr('src', '/wahsalud240216/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        $('#Asistencia').attr('src', 'http://wahsalud.tk/'+respuestaServer["logros"][loTiene].fotoLogro);
                         }
                         
                          if(respuestaServer["logros"][loTiene].nombreLogroES == "EntranamientoObte")
                         {
-                        $('#Entranamiento').attr('src', '/wahsalud240216/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        $('#Entranamiento').attr('src', 'http://wahsalud.tk/'+respuestaServer["logros"][loTiene].fotoLogro);
                         }
                         
                         if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanAmigoObte")
                         {
-                        $('#PlanAmigo').attr('src', '/wahsalud240216/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        $('#PlanAmigo').attr('src', 'http://wahsalud.tk/'+respuestaServer["logros"][loTiene].fotoLogro);
                         }
                         
                         if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanSemestralObte")
                         {
-                        $('#PagoSemestral').attr('src', '/wahsalud240216/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        $('#PagoSemestral').attr('src', 'http://wahsalud.tk/'+respuestaServer["logros"][loTiene].fotoLogro);
                         }
                         
                         if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanAnualObte")
                         {
-                        $('#PagoAnual').attr('src', '/wahsalud240216/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        $('#PagoAnual').attr('src', 'http://wahsalud.tk/'+respuestaServer["logros"][loTiene].fotoLogro);
                         }
                         
                         //============
@@ -513,18 +513,18 @@ $(function() {
                         
                          if(respuestaServer["logros"][loTiene].nombreLogroES == "PagoSemestralVen")
                         {
-                        $('#PagoSemestral').attr('src', '/wahsalud240216/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        $('#PagoSemestral').attr('src', 'http://wahsalud.tk/'+respuestaServer["logros"][loTiene].fotoLogro);
                         }
                         
                         if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanAnualVen")
                         {
-                        $('#PagoAnual').attr('src', '/wahsalud240216/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        $('#PagoAnual').attr('src', 'http://wahsalud.tk/'+respuestaServer["logros"][loTiene].fotoLogro);
                         }
                         
                         
                         if(respuestaServer["logros"][loTiene].nombreLogroES == "PlanAmigoVen")
                         {
-                        $('#PlanAmigo').attr('src', '/wahsalud240216/'+respuestaServer["logros"][loTiene].fotoLogro);
+                        $('#PlanAmigo').attr('src', 'http://wahsalud.tk/'+respuestaServer["logros"][loTiene].fotoLogro);
                         
                         }
                                                 
@@ -699,15 +699,7 @@ $(function() {
 
 
 </script>
-
-    
-   
-    
-    
-
-
 <script type="text/javascript" src="getProjects.js"></script> 
 <script type="text/javascript" src="cordova.js"></script> 
-
 </body>
 </html>
